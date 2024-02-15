@@ -19,3 +19,37 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+.list_input{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px black solid ;
+  padding: 20px ;
+  border-radius: 3px;
+}
+.list_input01{
+  margin: 10px;
+  position: absolute;
+  background-color: white;
+  top: 122px;
+  padding: 0 10px;
+}
+.div_lists{
+  margin: 0 100px 0 100px;
+}
+.added_title{
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+ 
+  
+}
+
+.added_points{
+  display: flex;
+  border-bottom: 1px rgb(199, 194, 194) solid;
+
+}

@@ -10,17 +10,20 @@ function ToDoList() {
     const[lists, setLists] = useState([])
     const handleDescription = (e) => {
         e.preventDefault();
-        const newItem = {description,date}
+        const newItem = {description:description,date:date}
         setLists([...lists, newItem])
-        console.log(lists)
+        setDescription('');
+        setDate('');
+       
     }
     return (
         <div>
             <div className='div01'>
-                <h1 className='simpletodo'>Simple ToDoList</h1>
+                <h1 className='simpletodo '>Simple ToDoList</h1>
             </div>
             <div>
-                <form onSubmit={handleDescription}>
+            <div className='list_input01' >Add ToDo: </div>
+                <form onSubmit={handleDescription} className='list_input' >
                     <label>Description</label>
                     <input className='text' name='dexcription' value={description} onChange={(e) => setDescription(e.target.value)} />
 
@@ -28,7 +31,7 @@ function ToDoList() {
                     <input type='date' name='date' value={date} onChange={(e) => setDate(e.target.value)} />
                     <button  type='submit'>Add</button>
                 </form>
-                <ToDOTable items={lists}/>
+                <ToDOTable items={lists} setLists={setLists}/>
             </div>
            
 
