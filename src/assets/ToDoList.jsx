@@ -45,7 +45,7 @@ function ToDoList() {
                 <form onSubmit={handleDescription} className='list_input'>
                     <TextField label="Description" className='text' value={description} onChange={(e) => setDescription(e.target.value)} />
                     <TextField label="Priority" value={priority} onChange={(e) => setPriority(e.target.value)} />
-                    <TextField value={date}  onChange={(e) => setDate(e.target.value)} />
+                    <TextField type="date" value={date}  onChange={(e) => setDate(e.target.value)} />
                     
                     <Button type='submit'>Add</Button>
                 </form>
