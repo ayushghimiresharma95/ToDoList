@@ -39,15 +39,13 @@ function ToDoList() {
 
     return (
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <div className='div01'>
-                <h1 className='simpletodo'>Simple ToDoList</h1>
-            </div>
+            
             <Stack direction="row" spacing={2} justifyContent="center" alignItems="center" width={"100%"} padding="30px">
                 <div className='list_input01'>Add ToDo: </div>
                 <form onSubmit={handleDescription} className='list_input'>
                     <TextField label="Description" className='text' value={description} onChange={(e) => setDescription(e.target.value)} />
                     <TextField label="Priority" value={priority} onChange={(e) => setPriority(e.target.value)} />
-                    <DatePicker value={date}  onChange={(e) => setDate(e.target.value)} />
+                    <TextField value={date}  onChange={(e) => setDate(e.target.value)} />
                     
                     <Button type='submit'>Add</Button>
                 </form>
